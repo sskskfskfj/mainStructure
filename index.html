@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .container {
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 3px;
+      box-sizing: border-box;
+      transition: all 0.3s ease;
+    }
+    input[type="submit"] {
+      width: 100%;
+      background-color: #95a5a6;
+      color: white;
+      padding: 10px;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background-color: #3498db;
+    }
+    input[type="text"]:focus, input[type="password"]:focus{
+        transform: scale(1.05);
+        box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Sign in</h2>
+    <form action="/member/save" method="post">
+        name<input type="text" name="memberName" placeholder="아이디를 입력하세요"><br>
+        email<input type="text" name="memberEmail" placeholder="이메일을 입력하세요"><br>
+        password<input type="password" name="memberPassword" placeholder="비밀번호를 입력하세요"><br>
+        <input type="submit" value="회원가입">
+    </form>
+  </div>
+</body>
+</html>
